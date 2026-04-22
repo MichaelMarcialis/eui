@@ -129,7 +129,7 @@ It's worth pointing out that although the examples provided are specific to EUI 
 
 ### `@elastic/eui/require-aria-label-for-modals`
 
-Ensure that EUI modal components (`EuiModal`, `EuiFlyout`, `EuiFlyoutResizable` ,`EuiConfirmModal`) have either an `aria-label` or `aria-labelledby` prop for accessibility. This helps screen reader users understand the purpose and content of modal dialogs.
+Ensure that EUI modal components (`EuiModal`, `EuiFlyout`, `EuiFlyoutResizable` ,`EuiConfirmModal`, `EuiPopover`, `EuiWrappingPopover`) have either an `aria-label` or `aria-labelledby` prop for accessibility. This helps screen reader users understand the purpose and content of modal dialogs.
 
 ### `@elastic/eui/consistent-is-invalid-props`
 
@@ -166,6 +166,21 @@ Ensure interactive EUI components (like e.g. `EuiLink`, `EuiButton`, `EuiRadio`)
 ### `@elastic/eui/require-table-caption`
 
 Ensure `EuiInMemoryTable`, `EuiBasicTable` have a `tableCaption` property for accessibility.
+
+### `@elastic/eui/badge-accessibility-rules`
+
+Ensure the `EuiBadge` includes appropriate accessibility attributes.
+
+- `iconOnClick` and `onClick` must not reference the same callback. The rule autofixes by removing `iconOnClick`.
+- `iconOnClickAriaLabel` is only valid when `iconOnClick` is present. The rule autofixes by removing `iconOnClickAriaLabel`.
+- `onClickAriaLabel` is only valid when `onClick` is present. The rule autofixes by removing `onClickAriaLabel`.
+
+### `@elastic/eui/icon-accessibility-rules`
+
+Ensure the `EuiIcon` includes appropriate accessibility attributes.
+ 
+- `EuiIcon` has an accessible name via `title`, `aria-label`, or `aria-labelledby`; otherwise mark it decorative with `aria-hidden={true}`
+- Do not combine `tabIndex` with `aria-hidden`
 
 ## Testing
 

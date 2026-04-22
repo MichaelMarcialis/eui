@@ -79,6 +79,7 @@ export type _EuiThemeBrandTextColors = {
   textWarning: ColorModeSwitch;
   textRisk: ColorModeSwitch;
   textDanger: ColorModeSwitch;
+  textAssistance: ColorModeSwitch;
 };
 
 export type _EuiThemeShadeColors = {
@@ -145,6 +146,8 @@ export type _EuiThemeTextColors = {
   textSubdued: ColorModeSwitch;
   textDisabled: ColorModeSwitch;
   textInverse: ColorModeSwitch;
+  textInk: ColorModeSwitch;
+  textGhost: ColorModeSwitch;
 };
 
 export type _EuiThemeSpecialColors = {
@@ -184,6 +187,7 @@ export type _EuiThemeBackgroundColors = {
   backgroundBaseWarning: ColorModeSwitch;
   backgroundBaseRisk: ColorModeSwitch;
   backgroundBaseDanger: ColorModeSwitch;
+  backgroundBaseAssistance: ColorModeSwitch;
   backgroundBaseSubdued: ColorModeSwitch;
   backgroundBasePlain: ColorModeSwitch;
   backgroundBaseDisabled: ColorModeSwitch;
@@ -191,6 +195,7 @@ export type _EuiThemeBackgroundColors = {
   backgroundBaseFormsPrepend: ColorModeSwitch;
   backgroundBaseFormsControlDisabled: ColorModeSwitch;
   backgroundBaseInteractiveHover: ColorModeSwitch;
+  backgroundBaseInteractiveHoverAssistance: ColorModeSwitch;
   backgroundBaseInteractiveSelect: ColorModeSwitch;
   backgroundBaseInteractiveSelectHover: ColorModeSwitch;
   backgroundBaseInteractiveOverlay: ColorModeSwitch;
@@ -205,6 +210,7 @@ export type _EuiThemeBackgroundColors = {
   backgroundLightWarning: ColorModeSwitch;
   backgroundLightRisk: ColorModeSwitch;
   backgroundLightDanger: ColorModeSwitch;
+  backgroundLightAssistance: ColorModeSwitch;
   backgroundLightText: ColorModeSwitch;
 
   backgroundFilledPrimary: ColorModeSwitch;
@@ -215,6 +221,7 @@ export type _EuiThemeBackgroundColors = {
   backgroundFilledWarning: ColorModeSwitch;
   backgroundFilledRisk: ColorModeSwitch;
   backgroundFilledDanger: ColorModeSwitch;
+  backgroundFilledAssistance: ColorModeSwitch;
   backgroundFilledText: ColorModeSwitch;
 };
 
@@ -255,6 +262,7 @@ export type _EuiThemeBorderColors = {
   borderBaseWarning: ColorModeSwitch;
   borderBaseRisk: ColorModeSwitch;
   borderBaseDanger: ColorModeSwitch;
+  borderBaseAssistance: ColorModeSwitch;
 
   borderBasePlain: ColorModeSwitch;
   borderBaseSubdued: ColorModeSwitch;
@@ -280,6 +288,7 @@ export type _EuiThemeBorderColors = {
   borderStrongWarning: ColorModeSwitch;
   borderStrongRisk: ColorModeSwitch;
   borderStrongDanger: ColorModeSwitch;
+  borderStrongAssistance: ColorModeSwitch;
   borderStrongText: ColorModeSwitch;
 };
 
@@ -367,9 +376,6 @@ export type _EuiThemeSeverityColors = {
 };
 
 export type _EuiThemeConstantColors = {
-  ghost: string;
-  ink: string;
-
   plainLight: string;
   plainDark: string;
 };

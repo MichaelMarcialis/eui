@@ -355,8 +355,6 @@ declare module '@elastic/eui-theme-borealis/lib/eui_theme_borealis_dark.json' {
     euiColorSeverityDanger: string;
     euiColorChartLines: string;
     euiColorChartBand: string;
-    euiColorGhost: string;
-    euiColorInk: string;
     euiColorPrimary: string;
     euiColorAccent: string;
     euiColorAccentSecondary: string;
@@ -393,11 +391,14 @@ declare module '@elastic/eui-theme-borealis/lib/eui_theme_borealis_dark.json' {
     euiColorTextWarning: string;
     euiColorTextRisk: string;
     euiColorTextDanger: string;
+    euiColorTextAssistance: string;
     euiColorTextParagraph: string;
     euiColorTextHeading: string;
     euiColorTextSubdued: string;
     euiColorTextDisabled: string;
     euiColorTextInverse: string;
+    euiColorTextGhost: string;
+    euiColorTextInk: string;
     euiColorBackgroundBasePrimary: string;
     euiColorBackgroundBaseAccent: string;
     euiColorBackgroundBaseAccentSecondary: string;
@@ -406,6 +407,7 @@ declare module '@elastic/eui-theme-borealis/lib/eui_theme_borealis_dark.json' {
     euiColorBackgroundBaseWarning: string;
     euiColorBackgroundBaseRisk: string;
     euiColorBackgroundBaseDanger: string;
+    euiColorBackgroundBaseAssistance: string;
     euiColorBackgroundBaseSubdued: string;
     euiColorBackgroundBasePlain: string;
     euiColorBackgroundBaseDisabled: string;
@@ -426,6 +428,7 @@ declare module '@elastic/eui-theme-borealis/lib/eui_theme_borealis_dark.json' {
     euiColorBackgroundLightWarning: string;
     euiColorBackgroundLightRisk: string;
     euiColorBackgroundLightDanger: string;
+    euiColorBackgroundLightAssistance: string;
     euiColorBackgroundLightText: string;
     euiColorBackgroundFilledPrimary: string;
     euiColorBackgroundFilledAccent: string;
@@ -435,6 +438,7 @@ declare module '@elastic/eui-theme-borealis/lib/eui_theme_borealis_dark.json' {
     euiColorBackgroundFilledWarning: string;
     euiColorBackgroundFilledRisk: string;
     euiColorBackgroundFilledDanger: string;
+    euiColorBackgroundFilledAssistance: string;
     euiColorBackgroundFilledText: string;
     euiColorBorderBasePrimary: string;
     euiColorBorderBaseAccent: string;
@@ -444,6 +448,7 @@ declare module '@elastic/eui-theme-borealis/lib/eui_theme_borealis_dark.json' {
     euiColorBorderBaseWarning: string;
     euiColorBorderBaseRisk: string;
     euiColorBorderBaseDanger: string;
+    euiColorBorderBaseAssistance: string;
     euiColorBorderBasePlain: string;
     euiColorBorderBaseSubdued: string;
     euiColorBorderBaseProminent: string;
@@ -461,6 +466,7 @@ declare module '@elastic/eui-theme-borealis/lib/eui_theme_borealis_dark.json' {
     euiColorBorderStrongWarning: string;
     euiColorBorderStrongRisk: string;
     euiColorBorderStrongDanger: string;
+    euiColorBorderStrongAssistance: string;
     euiColorBorderStrongText: string;
   };
   export default sassVariables;

@@ -32,7 +32,6 @@ import {
   EuiSuperDatePicker,
   EuiSpacer,
   EuiFormControlLayoutDelimited,
-  EuiFormLabel,
   EuiFieldText,
   EuiPanel,
   EuiText,
@@ -85,7 +84,7 @@ export default () => {
         </EuiText>
         <EuiSpacer />
         <EuiFormControlLayoutDelimited
-          prepend={<EuiFormLabel>Dates</EuiFormLabel>}
+          prepend="Dates"
           startControl={
             <EuiFieldText
               controlOnly
@@ -388,7 +387,13 @@ import React, { useState } from 'react';
 import {
   EuiSuperDatePicker,
   EuiSuperDatePickerProps,
+  EuiFlexGroup,
+  EuiFlexItem,
+  EuiSelect,
+  EuiSwitch,
+  EuiSpacer,
   OnTimeChangeProps,
+  useEuiTheme,
 } from '@elastic/eui';
 
 export default () => {
@@ -436,7 +441,7 @@ export default () => {
         width={width}
         compressed={compressed}
       />
-    </EuiSpacer>
+    </>
   );
 };
 ```

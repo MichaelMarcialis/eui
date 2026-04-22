@@ -16,12 +16,14 @@
 import {
   addFlyout,
   closeFlyout,
+  closeAllFlyouts,
   setActiveFlyout,
   setFlyoutWidth,
   setLayoutMode,
   setActivityStage,
   ACTION_ADD,
   ACTION_CLOSE,
+  ACTION_CLOSE_ALL,
   ACTION_SET_ACTIVE,
   ACTION_SET_WIDTH,
   ACTION_SET_LAYOUT_MODE,
@@ -109,6 +111,72 @@ describe('flyout manager actions', () => {
         size: undefined,
       });
     });
+
+    it('should include iconType in action when provided', () => {
+      const action = addFlyout(
+        'flyout-1',
+        'main',
+        LEVEL_MAIN,
+        'm',
+        undefined,
+        'faceHappy'
+      );
+
+      expect(action).toEqual({
+        type: ACTION_ADD,
+        flyoutId: 'flyout-1',
+        title: 'main',
+        level: LEVEL_MAIN,
+        size: 'm',
+        historyKey: undefined,
+        iconType: 'faceHappy',
+      });
+    });
+
+    it('should include iconType and minWidth when both provided', () => {
+      const action = addFlyout(
+        'flyout-1',
+        'main',
+        LEVEL_MAIN,
+        'm',
+        undefined,
+        'faceHappy',
+        100
+      );
+
+      expect(action).toEqual({
+        type: ACTION_ADD,
+        flyoutId: 'flyout-1',
+        title: 'main',
+        level: LEVEL_MAIN,
+        size: 'm',
+        historyKey: undefined,
+        iconType: 'faceHappy',
+        minWidth: 100,
+      });
+    });
+
+    it('should include historyKey in action when provided', () => {
+      const key = Symbol('test');
+      const action = addFlyout(
+        'flyout-1',
+        'main',
+        LEVEL_MAIN,
+        'm',
+        key,
+        'faceHappy'
+      );
+
+      expect(action).toEqual({
+        type: ACTION_ADD,
+        flyoutId: 'flyout-1',
+        title: 'main',
+        level: LEVEL_MAIN,
+        size: 'm',
+        historyKey: key,
+        iconType: 'faceHappy',
+      });
+    });
   });
 
   describe('closeFlyout', () => {
@@ -127,6 +195,16 @@ describe('flyout manager actions', () => {
 
       expect(action1.flyoutId).toBe('main-1');
       expect(action2.flyoutId).toBe('child-1');
+    });
+  });
+
+  describe('closeAllFlyouts', () => {
+    it('should create close all flyouts action', () => {
+      const action = closeAllFlyouts();
+
+      expect(action).toEqual({
+        type: ACTION_CLOSE_ALL,
+      });
     });
   });
 

@@ -2,6 +2,7 @@ import { IconType } from '@elastic/eui';
 
 export const iconTypes: Array<IconType> = [
   'accessibility',
+  'addToDashboard',
   'aggregate',
   'alignBottom',
   'alignBottomLeft',
@@ -198,7 +199,7 @@ export const iconTypes: Array<IconType> = [
   'minimize',
   'minus',
   'minusCircle',
-  'minusInSquare',
+  'minusSquare',
   'mobile',
   'money',
   'moon',
@@ -225,7 +226,7 @@ export const iconTypes: Array<IconType> = [
   'plugs',
   'plus',
   'plusCircle',
-  'plusInSquare',
+  'plusSquare',
   'popper',
   'presentation',
   'processor',
@@ -260,6 +261,7 @@ export const iconTypes: Array<IconType> = [
   'securitySignalDetected', // To be deprecated NO USAGE
   'securitySignalResolved', // To be deprecated NO USAGE
   'send',
+  'server',
   'sessionViewer', // To be deprecated
   'shard',
   'share',
@@ -312,6 +314,8 @@ export const iconTypes: Array<IconType> = [
   'thumbUp',
   'timeline',
   'timelineWithArrow', // To be deprecated
+  'transitionBottomIn',
+  'transitionBottomOut',
   'transitionLeftIn',
   'transitionLeftOut',
   'transitionTopIn',

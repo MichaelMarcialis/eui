@@ -127,6 +127,21 @@ describe('EuiButtonEmpty', () => {
       });
     });
 
+    describe('isLoading', () => {
+      it('is rendered', () => {
+        const { getByTestSubject } = render(
+          <EuiFormControlButton {...defaultProps} isLoading />
+        );
+
+        const classes = Object.values(
+          getByTestSubject('euiFormControlButton').classList
+        );
+
+        expect(getByTestSubject('euiFormControlButton')).toBeDisabled();
+        expect(classes.some((clx) => clx.includes('isLoading'))).toBe(true);
+      });
+    });
+
     describe('isInvalid', () => {
       it('is rendered', () => {
         const { getByTestSubject } = render(
@@ -218,6 +233,38 @@ describe('EuiButtonEmpty', () => {
           'testClass1'
         );
       });
+    });
+  });
+
+  describe('icon alignment', () => {
+    it('renders icons with `iconSide="right"` right aligned when no `value` is passed', () => {
+      const { baseElement } = render(
+        <EuiFormControlButton
+          {...defaultProps}
+          value={undefined}
+          iconType="user"
+          iconSide="right"
+        />
+      );
+
+      expect(
+        baseElement.querySelector('.euiButtonEmpty__content')
+      ).toHaveStyleRule('justify-content', 'flex-end');
+    });
+
+    it('renders icons with `iconSide="left"` left aligned when no `value` is passed', () => {
+      const { baseElement } = render(
+        <EuiFormControlButton
+          {...defaultProps}
+          value={undefined}
+          iconType="user"
+          iconSide="left"
+        />
+      );
+
+      expect(
+        baseElement.querySelector('.euiButtonEmpty__content')
+      ).toHaveStyleRule('justify-content', 'flex-start');
     });
   });
 });
